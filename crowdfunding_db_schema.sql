@@ -4,12 +4,12 @@
 
 
 CREATE TABLE "campaign" (
-    "cf_id" varchar(30)   NOT NULL,
-    "contact_id" varchar(30)   NOT NULL,
-    "company_name" varchar(30)   NOT NULL,
+    "cf_id" int   NOT NULL,
+    "contact_id" int   NOT NULL,
+    "company_name" varchar(255)   NOT NULL,
     "description" varchar(255)   NOT NULL,
-    "goal" int   NOT NULL,
-    "pledged" int   NOT NULL,
+    "goal" numeric(10,2)   NOT NULL,
+    "pledged" numeric(10,2)   NOT NULL,
     "outcome" varchar(30)   NOT NULL,
     "backers_count" int   NOT NULL,
     "country" char(2)   NOT NULL,
@@ -32,9 +32,9 @@ CREATE TABLE "category" (
 );
 
 CREATE TABLE "contacts" (
-    "contact_id" varchar(30)   NOT NULL,
-    "first_name" varchar(30)   NOT NULL,
-    "last_name" varchar(30)   NOT NULL,
+    "contact_id" int   NOT NULL,
+    "first_name" varchar(255)   NOT NULL,
+    "last_name" varchar(255)   NOT NULL,
     "email" varchar(255)   NOT NULL,
     CONSTRAINT "pk_contacts" PRIMARY KEY (
         "contact_id"
